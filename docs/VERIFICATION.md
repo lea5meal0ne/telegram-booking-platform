@@ -4,8 +4,8 @@ Executed locally on October 10, 2026. PostgreSQL 17 and Redis 7 ran in isolated 
 
 | Check | Executed result |
 | --- | --- |
-| Backend and bot suite, host Python 3.14 | 39 passed |
-| Backend and bot suite, production Python 3.12 image | 39 passed |
+| Backend and bot suite, host Python 3.14 | 40 passed |
+| Backend and bot suite, production Python 3.12 image | 40 passed |
 | React component tests | 4 passed |
 | Chromium mobile end-to-end workflows | 2 passed |
 | TypeScript validation | Passed |
@@ -33,4 +33,4 @@ Screenshots in `docs/screenshots` come from these browser workflows and were vis
 
 Real Telegram message delivery, BotFather configuration, a public HTTPS domain, and VPS operation were not exercised. The user requested completion without those credentials. Bot handlers and notification rendering/delivery calls were tested with Telegram method doubles; database persistence, API authorization, and browser workflows were tested against actual running services. Caddy validation checks configuration syntax, not a public certificate issuance.
 
-GitHub Actions is configured to repeat backend, frontend, browser, and Docker checks. Its published run results are available in the repository's Actions tab.
+GitHub Actions repeats backend, frontend, browser, and Docker checks. The initial published run passed all four jobs: https://github.com/lea5meal0ne/telegram-booking-platform/actions/runs/38063252866. Subsequent results are available in the repository's Actions tab.

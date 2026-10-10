@@ -1,5 +1,7 @@
 # Telegram Booking Platform
 
+[![CI](https://github.com/lea5meal0ne/telegram-booking-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/lea5meal0ne/telegram-booking-platform/actions/workflows/ci.yml)
+
 A configurable appointment platform for one business per deployment, combining a Telegram bot, a mobile React Mini App, and a PostgreSQL-backed API. Services, prices, business content, working hours, booking rules, and portfolio content are managed through the administrator interface. No industry-specific services or customer records are preloaded.
 
 Russian is the default interface language. Customers and administrators can switch to English; preferences are shared between the bot and Mini App.

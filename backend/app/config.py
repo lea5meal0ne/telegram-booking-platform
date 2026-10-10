@@ -6,7 +6,7 @@ from pydantic import model_validator
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
     environment: str = "production"
-    database_url: str = "postgresql+asyncpg://booking:booking@db/booking"
+    database_url: str
     redis_url: str = "redis://redis:6379/0"
     bot_token: str = ""
     admin_ids: str = ""

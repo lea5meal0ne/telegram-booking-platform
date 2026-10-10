@@ -397,3 +397,12 @@ async def test_rate_limit_cannot_be_bypassed_with_arbitrary_bearer_headers():
             )
         assert result.status_code == 429
         assert result.json()["message"] == "Too many requests. Try again later."
+
+
+async def test_database_configuration_has_no_credential_fallback(monkeypatch):
+    from pydantic import ValidationError
+
+    monkeypatch.delenv("DATABASE_URL", raising=False)
+    with pytest.raises(ValidationError) as error:
+        Settings(_env_file=None)
+    assert any(item["loc"] == ("database_url",) and item["type"] == "missing" for item in error.value.errors())
